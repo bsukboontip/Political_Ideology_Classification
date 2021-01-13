@@ -1,1 +1,13 @@
-# Political_Ideology_Classification
+# Political Ideology Detection Using BERT and Convolution Neural Network
+
+## How to run experiments
+
+The entire code for the experiment is in `implementation.pynb` which was exported from Google Collab. Therefore, some code includes Google Colab tools such as mounting drives to retrieve the dataset in the form of csv files. To run the code, you must have all three csv files in Google Colab folder you intend to mount since it contains all the dataset that the model trains and tests. While the dataset can be downloaded from the source referenced below, you must also manually reference each publication with its respective political leaning assigned by [AllSides.com](https://www.allsides.com/unbiased-balanced-news) as a new column. However, because the datasets are not included in the `.zip` files as per instructions, the code could not run. To run to code, it is also recommended to discard parts of the dataset if you intend to run just to test if the implementation works since the dataset is quite large and may take a lot of resources and time. Because the code is run in Google Colab, all the necessary packages are already installed with the exception of `transformers` which is specified to install in the Colab file so there is no need to pre-install anything for the re-implementation. Included in the `.zip` file are the current `README.md` file and the `implementaion.ipynb` file containing the code for the implementation of the paper.
+
+## Code References
+
+It should be noted that there is no reference code I could directly link to the reference papers' implementation due to their lack of available repositories. Therefore, the entire code implementation is conducted through many different tutorials and implementations online such as articles [Curiousily](https://curiousily.com/posts/sentiment-analysis-with-bert-and-hugging-face-using-pytorch-and-python/) and official documentation from HuggingFace which include processes such as encoding texts into the data loader so the model and train and test correctly in tensor format. However, the convolutional neural network portion of the implementation and the pre-processing are written directly from scratch with notes from class and documentations online.
+
+## Dataset
+
+The dataset used in this implementation is taken directly from Kaggle's [All the news](https://www.kaggle.com/snapcrack/all-the-news) dataset which contains 143,000 articles from 15 American Publications. It should be noted that this dataset is different from the one the reference paper used as the reference paper wrote its own code to spider [AllSides.com](https://www.allsides.com/unbiased-balanced-news) and generate their own dataset.
